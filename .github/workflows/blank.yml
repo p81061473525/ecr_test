@@ -11,6 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      
       - name: ls -l 
         run: ls -l 
+        
+      - name: install aws
+        run: apt install awscli -y 
+      - name: install docoker 
+        run: apt install docker 
 
