@@ -12,11 +12,28 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          
       - name: ls -l 
         run: ls -l 
         
       - name: install aws
         run: sudo apt install awscli -y 
-      - name: install docoker 
+        
+      - name: install docker  
         run: sudo apt install docker -y 
+
+      - name: check aws and docker command
+        run: |
+          aws --version 
+          docker --version
+          
+      - name: systemctl restart docker 
+        run: sudo systemctl restart docker 
+
+  
 
