@@ -1,0 +1,4 @@
+# 目前懶得測試 php-fpm ... 還是用 nginx 代替
+FROM nginx
+COPY index.html /usr/share/nginx/html
+COPY ngixn.conf /etc/nginx/conf.d/
