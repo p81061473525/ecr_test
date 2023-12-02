@@ -8,7 +8,7 @@ services:
 
   php-fpm:
     build:
-      context: php
+      context: php-fpm
       dockerfile: dockerfile
     image: public.ecr.aws/w3l0w0b0/php-fpm
     container_name: php-fpm
