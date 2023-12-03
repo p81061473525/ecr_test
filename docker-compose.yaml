@@ -5,7 +5,12 @@ services:
       dockerfile: dockerfile
     image: public.ecr.aws/w3l0w0b0/nginx
     container_name: nginx
-
+    env_file:
+      - nginx/.env
+    environment:
+      - DB_HOST=${DB_HOST}
+      - DB_PASSWORD=${DB_PASSWORD}
+      
   php-fpm:
     build:
       context: php-fpm
