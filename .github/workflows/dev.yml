@@ -14,7 +14,7 @@ jobs:
   deploy:
     uses: p81061473525/argocdtest/.github/workflows/deploy-argocd.yaml@main
     with:
-      file_name: .env
+      envFile: '.env'
     secrets:
       MY_GITHUB_PRIVATE_KEY: ${{ secrets.MY_GITHUB_PRIVATE_KEY }}
       
