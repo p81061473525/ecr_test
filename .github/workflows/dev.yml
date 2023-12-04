@@ -12,7 +12,7 @@ jobs:
   #     AWS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
   deploy:
-    needs: build
+  #  needs: build
     uses: p81061473525/argocdtest/.github/workflows/deploy-argocd.yaml@main
   # secrets:
   #   AWS_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
