@@ -3,12 +3,12 @@ services:
     build:
       context: nginx
       dockerfile: dockerfile
-    image: public.ecr.aws/w3l0w0b0/nginx
+    image: public.ecr.aws/w3l0w0b0/nginx:$NGINX_VERSION
     container_name: nginx
       
   php-fpm:
     build:
       context: php-fpm
       dockerfile: dockerfile
-    image: public.ecr.aws/w3l0w0b0/php-fpm
+    image: public.ecr.aws/w3l0w0b0/php-fpm:$PHPFPM_VERSION
     container_name: php-fpm
